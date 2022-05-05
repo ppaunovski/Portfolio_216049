@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    --main-bg-color: #FEF2DB;
+    --main-font-color: #263042;
+    --nav-bg-color: #263042;
+    --nav-font-color: #FEF2DB;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    display: flex;
+    position: sticky;
+    top: 0;
+    flex-direction: column;
+    gap: 10%;
+    background-color: var(--nav-bg-color);
+    width: 20%;
+    max-height: 100vh;
+    min-width: 25vh;
+}
+
+nav > *{
+    margin-right: auto;
+    margin-left: auto;
+}
+
+nav .img{
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+nav img{
+    max-width: 50%;
+    border-radius: 50%;
+    border: var(--nav-font-color) solid 3px;
+}
+
+.nav-link a{
+    text-decoration: none;
+    color: var(--nav-font-color);
+}
+
+.nav-link li{
+   list-style-image: url("img/user/png/001-user.png");
+    padding-bottom: 100%;
+    font-size: 2.2vh;
+}
+
+.content{
+    background-color: var(--main-bg-color);
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+}
+
+.sticky{
+    position: sticky;
+    top: 0;
+    background-color: var(--nav-bg-color);
+    display: flex;
+    justify-content: end;
+    padding: 2vh;
+}
+
+.sticky .link a{
+    text-decoration: none;
+    color: var(--nav-font-color);
+    padding: 0 15px;
+}
+
+section{
+    color: var(--main-font-color);
+    height: 100vh;
+    width: 100%;
+}
+
+#home .img{
+    float: right;
+}
+
+#home img{
+    margin-top: 15vh;
+    max-width: 50vw;
+}
+
+.home-text h1{
+    padding: 1% 8%;
+    font-size: 3vw
+}
+
+#about h1{
+    padding: 10% 5% 5% 5%;
+    font-size: 3vw;
+}
+
+.about-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-container > *{
+    flex: 0;
+    min-width: 25%;
+}
+
+.about-container div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.about-container p{
+    text-align: center;
+}
+
+.about-container div img{
+    max-width: 100%;
+}
+
+#skills .table-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: space-between;
+}
+
+#skills h1{
+    padding: 10% 5% 5% 5%;
+    font-size: 3vw;
+}
+
+#skills table{
+    margin-bottom: 2em;
+}
+
+td{
+    border: var(--main-font-color) solid 2px;
+    text-align: center;
+}
+
+td:only-child{
+    font-size: 3vw;
+    font-weight: bold;
+}
+
+.skill-bar-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15em;
+    height: 2em;
+}
+
+.skill-bar{
+    width: 85%;
+    height: 40%;
+    border: 2px solid var(--main-font-color);
+    border-radius: 15px;
+}
+
+.filler{
+    height: 100%;
+    width: 70%;
+    border-radius: 15px;
+    background-image: linear-gradient(to right, #ad7205, #df9307, #fac86b);
+}
+
+#projects .grid-container{
+    display: grid;
+    column-gap: 5%;
+    row-gap: 5%;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#projects .grid-item{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: black solid 3px;
+}
+
+#contact h1{
+    padding: 10% 5% 5% 5%;
+    font-size: 3vw;
+}
+
+#contact form{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    gap: 5% 3%;
+}
+
+#contact .surname{
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    border-radius: 10px;
+}
+
+.name{
+    border-radius: 10px;
+    grid-column: 2;
+}
+
+#contact .email,.message{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    border-radius: 10px;
+}
+
+#contact button{
+    grid-column: 4;
+    background-color: var(--main-font-color);
+    color: var(--nav-font-color);
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    padding: 10px 0;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+.message{
+    resize: none;
+    grid-row-start: 3;
+    grid-row-end: 8;
+}
+
+#contact .center {
+    margin: 0 auto;
+}
+
+.form-wrapper{
+    background-color: green;
+    margin: 0 10%;
+}
+
+
+form{
+    padding: 0;
+    margin: 0;
+}
