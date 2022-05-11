@@ -1,0 +1,106 @@
+*{
+    --main-bg-color: #FEF2DB;
+    --main-font-color: #263042;
+}
+
+body{
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+    font-family: monospace;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.typing{
+    position: relative;
+    font-size: 5vw;
+}
+
+.typing::before,
+.typing::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.typing::before{
+    background-color: var(--main-bg-color);
+    animation: typing 8s steps(24) 1s forwards;
+}
+.typing::after{
+    background-color: var(--main-font-color);
+    width: 0.125em;
+    animation: typing 8s steps(24) 1s forwards ,typingLine 0.8s steps(24) infinite;
+}
+
+.fly-in{
+    transform: translateY(30px);
+    opacity: 0;
+    animation: fly-in 2.5s ease 9s forwards;
+    font-size: 3vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.continue-wrap{
+    background-color: var(--main-font-color);
+    width: max-content;
+    height: max-content;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: solid 2px var(--main-bg-color);
+    box-shadow: 3px 3px 0 var(--main-font-color);
+}
+.continue{
+    width: 100%;
+    height: 100%;
+}
+.continue a{
+    text-decoration: none;
+    color: var(--main-bg-color);
+}
+.continue a:hover{
+    animation: fade-out 1s infinite, fade-in 1s infinite;
+}
+.continue-wrap:hover{
+    animation: fade 0.2s forwards;
+}
+@keyframes fade {
+    to{
+        box-shadow: 5px 5px 5px var(--main-font-color);
+        border: rgba(254, 242, 219, 1) solid 3px;
+    }
+}
+@keyframes fade-out {
+    to{
+        color: var(--main-font-color);
+    }
+}
+@keyframes fade-in {
+    to{
+        color: var(--main-bg-color);
+    }
+}
+
+@keyframes typing {
+    to{
+        left: 100%;
+    }
+}
+@keyframes typingLine {
+    to{
+       background-color: var(--main-bg-color);
+    }
+}
+
+@keyframes fly-in {
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
