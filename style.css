@@ -201,6 +201,10 @@ footer{
     animation: fillBar 3s ease;
 }
 
+.fill-in.active::before{
+    z-index: 0;
+}
+
 @keyframes fillBar {
     from{
         width: 0;
