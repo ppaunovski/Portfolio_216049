@@ -1,5 +1,23 @@
-const projectOneBtn = document.querySelector('[data-p-one-btn]')
+const fillSkillBar = document.querySelectorAll('.fill-in');
 
-projectOneBtn.addEventListener('click', () => {
-    console.log('clicked btn 1')
-})
+const options = {
+    threshold: 0,
+    rootMargin: "0px 0px -100px 0px"
+};
+
+const fillOnScroll = new IntersectionObserver
+(function(entries, fillOnScroll){
+    entries.forEach(entry => {
+        if(!entry.isIntersecting){
+            return;
+        }
+
+        entry.target.classList.add('active');
+        fillOnScroll.unobserve(entry.target);
+
+    })
+}, options);
+
+fillSkillBar.forEach(filler => {
+    fillOnScroll.observe(filler);
+});
